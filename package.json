@@ -1,0 +1,36 @@
+{
+  "name": "progress-dot",
+  "description": "Show a progress dot in the status bar",
+  "repository": "https://github.com/asiloisad/pulsar-progress-dot",
+  "keywords": [
+    "busy",
+    "signal",
+    "status-bar",
+    "indicator"
+  ],
+  "version": "0.0.0",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.100.0 <2.0.0"
+  },
+  "main": "./lib/index",
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  },
+  "providedServices": {
+    "busy-signal": {
+      "versions": {
+        "1.0.0": "providerRegistry"
+      }
+    },
+    "atom-ide-busy-signal": {
+      "versions": {
+        "0.1.0": "provideBusySignal"
+      }
+    }
+  }
+}
