@@ -43,31 +43,31 @@ In your main module:
 module.exports = {
   async consumeBusySignal(api) {
     // Automatically shown while the promise is pending:
-    const result = await api.reportBusyWhile('Downloading data...', () => fetch('https://...'))
+    const result = await api.reportBusyWhile("Downloading data...", () => fetch("https://..."));
 
     // Or manage the message manually:
-    const message = api.reportBusy('Formatting...')
-    await format()
-    message.setTitle('Writing to disk...')
-    await writeToDisk()
-    message.dispose()
-  }
-}
+    const message = api.reportBusy("Formatting...");
+    await format();
+    message.setTitle("Writing to disk...");
+    await writeToDisk();
+    message.dispose();
+  },
+};
 ```
 
 ### API methods
 
-| Method | Returns | Description |
-| --- | --- | --- |
-| `reportBusy(title)` | `BusyMessage` | Show a busy message, returned handle must be disposed when done |
-| `reportBusyWhile(title, fn)` | `Promise` | Show a busy message for the duration of the async `fn` |
+| Method                       | Returns       | Description                                                     |
+| ---------------------------- | ------------- | --------------------------------------------------------------- |
+| `reportBusy(title)`          | `BusyMessage` | Show a busy message, returned handle must be disposed when done |
+| `reportBusyWhile(title, fn)` | `Promise`     | Show a busy message for the duration of the async `fn`          |
 
 ### BusyMessage methods
 
-| Method | Description |
-| --- | --- |
+| Method            | Description             |
+| ----------------- | ----------------------- |
 | `setTitle(title)` | Update the message text |
-| `dispose()` | Remove the message |
+| `dispose()`       | Remove the message      |
 
 ## Consumed Service `busy-signal`
 
@@ -90,33 +90,33 @@ In your `package.json`:
 In your main module:
 
 ```javascript
-const { CompositeDisposable } = require('atom')
+const { CompositeDisposable } = require("atom");
 
 module.exports = {
   activate() {
-    this.subscriptions = new CompositeDisposable()
+    this.subscriptions = new CompositeDisposable();
   },
   consumeSignal(registry) {
-    const provider = registry.create()
-    this.subscriptions.add(provider)
-    provider.add('Building project')
+    const provider = registry.create();
+    this.subscriptions.add(provider);
+    provider.add("Building project");
     // ... later:
-    provider.remove('Building project')
+    provider.remove("Building project");
   },
   deactivate() {
-    this.subscriptions.dispose()
-  }
-}
+    this.subscriptions.dispose();
+  },
+};
 ```
 
 ### Provider methods
 
-| Method | Description |
-| --- | --- |
-| `add(title)` | Show a busy message with the given title |
-| `remove(title)` | Remove a previously added message |
-| `clear()` | Remove all messages from this provider |
-| `dispose()` | Remove all messages and dispose the provider |
+| Method          | Description                                  |
+| --------------- | -------------------------------------------- |
+| `add(title)`    | Show a busy message with the given title     |
+| `remove(title)` | Remove a previously added message            |
+| `clear()`       | Remove all messages from this provider       |
+| `dispose()`     | Remove all messages and dispose the provider |
 
 ## Contributing
 
