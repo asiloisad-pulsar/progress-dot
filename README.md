@@ -19,7 +19,7 @@ To install `progress-dot` search for [progress-dot](https://web.pulsar-edit.dev/
 
 Two service APIs are available. Use `atom-ide-busy-signal` for new packages: async lifecycle is handled automatically and each message is independently disposable. Use `busy-signal` when you need multiple concurrent messages from a single provider or fine-grained `add`/`remove`/`clear` control, or for compatibility with older packages.
 
-## Consumed Service `atom-ide-busy-signal` (recommended)
+## Consumed Service `atom-ide-busy-signal`
 
 High-level API that manages busy messages tied to async operations.
 
