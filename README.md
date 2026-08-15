@@ -13,7 +13,7 @@ Fork of [busy-signal](https://github.com/steelbrain/busy-signal).
 
 ## Installation
 
-To install `progress-dot` search for [progress-dot](https://web.pulsar-edit.dev/packages/progress-dot) in the Install pane of the Pulsar settings or run `ppm install progress-dot`. Alternatively, you can run `ppm install asiloisad/pulsar-progress-dot` to install a package directly from the GitHub repository.
+To install `progress-dot` search for [progress-dot](https://web.pulsar-edit.dev/packages/progress-dot) in the Install pane of the Pulsar settings or run `ppm install progress-dot`. Alternatively, you can run `ppm install asiloisad-pulsar/progress-dot` to install a package directly from the GitHub repository.
 
 ## Services
 
