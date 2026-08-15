@@ -1,7 +1,7 @@
 {
   "name": "progress-dot",
   "description": "Show a progress dot in the status bar",
-  "repository": "https://github.com/asiloisad/pulsar-progress-dot",
+  "repository": "https://github.com/asiloisad-pulsar/progress-dot",
   "keywords": [
     "busy",
     "signal",
