@@ -2,6 +2,9 @@
 
 Show a progress dot in the status bar. A base package that provides an easy-to-use API for other packages to signal they are performing a task.
 
+> [!NOTE]
+> This package is in maintenance mode. If you use [Lumine](https://github.com/lumine-code/lumine), you may be interested in [busy-signal](https://github.com/lumine-code/busy-signal).
+
 Fork of [busy-signal](https://github.com/steelbrain/busy-signal).
 
 ## Features
